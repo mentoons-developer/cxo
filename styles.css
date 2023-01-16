@@ -257,7 +257,9 @@ h4 {
   grid-column: 1/-1;
   font-size: 1rem;
 }
-
+.pricing .h-c {
+  display: none;
+}
 .samples-heading {
   display: flex;
   flex-direction: column;
@@ -362,7 +364,7 @@ th p {
 table {
   width: 100%;
   text-align: center;
-  border: 1px solid #f4bb44;
+  /* border: 1px solid #f4bb44; */
   background-color: white;
   border-radius: 2rem !important;
 }
@@ -772,6 +774,11 @@ progress {
   z-index: 999;
   /* user-select: none; */
 }
+
+.social-profile .plans table {
+  background-color: #f5f5f5;
+}
+
 @media (min-width: 768px) {
   .footer {
     padding: 1.5rem;
@@ -980,6 +987,7 @@ progress {
     /* max-height: 439px; */
     min-height: 409px;
     padding: 2rem;
+    padding-top: 0;
     border-radius: 3rem;
     border: 3px solid black;
   }
@@ -1146,6 +1154,45 @@ progress {
 }
 
 @media (max-width: 500px) {
+  .pricing .h-c {
+    display: flex;
+    margin: 1rem;
+  }
+  .h-c {
+    display: none;
+  }
+  .top {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    row-gap: 1.3rem;
+  }
+  .top .contact {
+    align-self: start;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .contact-here {
+    align-items: start;
+    order: 3;
+  }
+  .contact-here a {
+    padding: 0;
+    align-self: flex-start;
+  }
+  .services ul {
+    gap: 0.1rem;
+    margin-bottom: 0;
+    /* margin-right: -2rem; */
+    width: 100%;
+    padding-left: 0;
+  }
+  .samples-heading {
+    margin-top: 2rem;
+  }
+  .slide {
+    width: fit-content;
+    min-width: auto;
+  }
   .advice-form-wrapper .advice-form {
     width: 90vw;
     min-width: 90vw;
@@ -1160,6 +1207,10 @@ progress {
     transform: translate(-50%, -50%);
     /* margin: 2rem; */
     /* background-color: red; */
+  }
+  .newsletter {
+    padding: 0.2rem;
+    min-height: 3.3rem;
   }
   .newsletter button {
     font-size: 0.9rem;
